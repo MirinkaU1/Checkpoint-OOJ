@@ -6,16 +6,15 @@
     <title>Panier d'achat OOJ</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-gray-100 font-Poppins">
     <!-- Navbar -->
-    <nav class="bg-white shadow p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold font-Poppins">Boutique Trendy Pink</h1>
+    <nav class="bg-white fixed w-full shadow p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Boutique Trendy Pink</h1>
         <div class="relative">
             <button id="cart-button" class="text-gray-700 focus:outline-none">
-                <i class="fa-solid fa-cart-shopping text-4xl"></i>
+                <i id="cart-icon" class="fa-solid fa-cart-shopping text-4xl"></i>
             </button>
             <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
         </div>
@@ -23,7 +22,7 @@
 
     <!-- Produits -->
     <main class="container mx-auto p-8">
-        <h2 class="text-2xl font-bold mb-6">Produits Apple disponibles</h2>
+        <h2 class="text-2xl mt-16 font-bold mb-6">Produits Apple disponibles</h2>
         <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Les produits seront injectés ici par JavaScript -->
         </div>
@@ -48,7 +47,7 @@
                 <p id="total-price" class="text-xl font-semibold">0 FCFA</p>
             </div>
             <div class="mt-4 text-right">
-                <button id="checkout-button" class="bg-blue-500 text-white px-4 py-2 rounded">Passer à la caisse</button>
+                <button id="checkout-button" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-500">Passer à la caisse</button>
             </div>
         </div>
     </div>

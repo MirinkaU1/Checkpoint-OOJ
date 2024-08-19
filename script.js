@@ -63,9 +63,9 @@ class ShoppingCart {
         return this.items.reduce((total, item) => total + item.getTotalPrice(), 0);
     }
 
+
     // Mettre à jour l'affichage du panier
     updateCartDisplay() {
-        // Mettre à jour le compteur du panier
         const cartCountElement = document.getElementById('cart-count');
         cartCountElement.textContent = this.getTotalItems();
 
@@ -139,7 +139,7 @@ function displayProducts() {
             <img src="${product.image}" alt="${product.name}" class="w-40 h-40 object-cover self-center mb-4">
             <h3 class="text-lg font-semibold mb-2">${product.name}</h3>
             <p class="text-gray-700 mb-4">${product.price} FCFA</p>
-            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded w-full">Ajouter au panier</button>
+            <button class="add-to-cart-btn bg-gray-700 hover:bg-gray-500 active:bg-gray-900 text-white px-4 py-2 rounded w-full">Ajouter au panier</button>
         `;
 
         const addToCartBtn = productCard.querySelector('.add-to-cart-btn');
